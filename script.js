@@ -1,6 +1,6 @@
 // Démo locale : les produits sont enregistrés dans localStorage du navigateur.
 // Pour vendre en ligne à plusieurs clients, il faudra ensuite une base de données partagée.
-const WHATSAPP_NUMBER = "212600000000";
+const WHATSAPP_NUMBER = "212754072054";
 const DEFAULT_PRODUCTS = [
   {id:1,name:"Carte graphique GeForce RTX",category:"Composants PC",price:3499,desc:"Carte graphique pour gaming et création.",icon:"▰"},
   {id:2,name:"Processeur AMD Ryzen 5",category:"Composants PC",price:1299,desc:"Processeur polyvalent pour configuration gaming.",icon:"▦"},
