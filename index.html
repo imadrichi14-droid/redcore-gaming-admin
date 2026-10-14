@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="REDCORE GAMING — matériel informatique et accessoires gaming au Maroc.">
+  <title>REDCORE GAMING | Matériel informatique</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="topline">LIVRAISON PARTOUT AU MAROC · COMMANDE SIMPLE PAR WHATSAPP</div>
+  <header class="header">
+    <a class="brand" href="#"><span class="brand-mark">R</span><span>RED<span class="red">CORE</span><small>GAMING STORE</small></span></a>
+    <nav><a href="#produits">Produits</a><a href="#categories">Catégories</a><a href="#contact">Contact</a></nav>
+    <div class="header-actions"><button class="admin-open" id="open-admin">⚙ Gestion</button><button class="cart-button" id="open-cart">Panier <span id="cart-count">0</span></button></div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">PERFORMANCE. PRÉCISION. PUISSANCE.</p>
+        <h1>UPGRADE<br>TON <span class="red">SETUP.</span></h1>
+        <p>Composants PC, accessoires gaming et équipement informatique. Trouve le matériel qu'il te faut.</p>
+        <a class="primary-btn" href="#produits">DÉCOUVRIR LES PRODUITS <span>↗</span></a>
+        <div class="hero-stats"><div><strong>PC</strong><span>Composants</span></div><div><strong>RGB</strong><span>Accessoires</span></div><div><strong>MA</strong><span>Livraison Maroc</span></div></div>
+      </div>
+      <div class="hero-art" aria-label="Illustration gaming décorative"><div class="orb"></div><div class="chip"><span>RC</span><small>HIGH PERFORMANCE</small></div><div class="art-tag">GEAR UP <b>01</b></div></div>
+    </section>
+
+    <section class="categories section" id="categories">
+      <div class="section-head"><div><p class="eyebrow">TROUVE TON ÉQUIPEMENT</p><h2>Explorer les <span class="red">catégories</span></h2></div></div>
+      <div class="category-grid">
+        <button class="category-card" data-category="Composants PC"><span class="cat-icon">▦</span><b>Composants PC</b><small>GPU · CPU · RAM · SSD</small><span class="arrow">↗</span></button>
+        <button class="category-card" data-category="Périphériques"><span class="cat-icon">⌨</span><b>Périphériques</b><small>Claviers · Souris · Casques</small><span class="arrow">↗</span></button>
+        <button class="category-card" data-category="Écrans"><span class="cat-icon">▣</span><b>Écrans</b><small>Moniteurs et accessoires</small><span class="arrow">↗</span></button>
+        <button class="category-card" data-category="PC Gamer"><span class="cat-icon">▤</span><b>PC Gamer</b><small>Configurations complètes</small><span class="arrow">↗</span></button>
+      </div>
+    </section>
+
+    <section class="products section" id="produits">
+      <div class="section-head products-head"><div><p class="eyebrow">SÉLECTION REDCORE</p><h2>Nos <span class="red">produits</span></h2></div>
+        <div class="tools"><input id="search" type="search" placeholder="Rechercher un produit…" aria-label="Rechercher un produit"><select id="filter" aria-label="Filtrer par catégorie"><option value="Tous">Toutes les catégories</option><option>Composants PC</option><option>Périphériques</option><option>Écrans</option><option>PC Gamer</option></select></div>
+      </div>
+      <p class="demo-note">Produits et prix de démonstration — remplace-les par tes vrais articles avant la mise en vente.</p>
+      <div class="product-grid" id="product-grid"></div>
+    </section>
+
+    <section class="banner"><div><p class="eyebrow">TON SETUP. TES RÈGLES.</p><h2>Prêt à passer<br>au <span class="red">niveau supérieur ?</span></h2></div><a href="#produits" class="primary-btn">VOIR LE CATALOGUE ↗</a></section>
+    <section class="contact section" id="contact"><p class="eyebrow">UNE QUESTION ?</p><h2>Parlons de ton <span class="red">setup.</span></h2><p>Contacte-nous pour vérifier la disponibilité, demander conseil ou passer commande.</p><button class="primary-btn" id="contact-wa">CONTACTER SUR WHATSAPP ↗</button></section>
+  </main>
+
+  <footer><a class="brand" href="#"><span class="brand-mark">R</span><span>RED<span class="red">CORE</span><small>GAMING STORE</small></span></a><p>© <span id="year"></span> REDCORE GAMING · Maroc</p><small>Les prix, disponibilités et délais de livraison doivent être confirmés avant toute commande.</small></footer>
+
+  <div class="overlay" id="overlay"></div>
+  <aside class="cart-panel" id="cart-panel" aria-label="Panier">
+    <div class="cart-head"><h2>Ton panier</h2><button id="close-cart" class="close-btn" aria-label="Fermer">×</button></div>
+    <div id="cart-items" class="cart-items"><p class="empty">Ton panier est vide pour le moment.</p></div>
+    <div class="cart-bottom"><div class="total-line"><span>Total estimé</span><strong id="cart-total">0 DH</strong></div><button class="primary-btn full" id="checkout">COMMANDER SUR WHATSAPP ↗</button><small>La commande sera envoyée par WhatsApp. Le paiement n'est pas traité sur ce site.</small></div>
+  </aside>
+  <section class="admin-panel" id="admin-panel" hidden>
+    <div class="admin-head"><div><p class="eyebrow">ESPACE PRIVÉ</p><h2>Gestion des <span class="red">produits</span></h2></div><button id="close-admin" class="close-btn" aria-label="Fermer">×</button></div>
+    <p class="admin-warning">Mode local : les changements sont sauvegardés dans ce navigateur uniquement. Ce panneau n'est pas sécurisé pour un vrai site public et ne synchronise pas les produits avec les appareils des clients.</p>
+    <form id="product-form" class="admin-form">
+      <input type="hidden" id="edit-id">
+      <label>Nom du produit<input id="p-name" required maxlength="90" placeholder="Ex. Carte graphique RTX 4060"></label>
+      <div class="admin-fields"><label>Prix (DH)<input id="p-price" required type="number" min="0" step="0.01" placeholder="2499"></label><label>Catégorie<select id="p-category"><option>Composants PC</option><option>Périphériques</option><option>Écrans</option><option>PC Gamer</option></select></label></div>
+      <label>Description<textarea id="p-desc" maxlength="250" placeholder="Description courte du produit"></textarea></label>
+      <label>Photo du produit<input id="p-image" type="file" accept="image/*"><small>Image JPG, PNG ou WebP. Utilise une image de moins de 1 Mo.</small></label>
+      <div id="image-preview-wrap" hidden><img id="image-preview" alt="Aperçu du produit"><button type="button" id="remove-image" class="remove-image">Retirer la photo</button></div>
+      <div class="admin-actions"><button class="primary-btn" type="submit" id="save-product">AJOUTER LE PRODUIT</button><button class="admin-secondary" type="button" id="cancel-edit" hidden>Annuler</button></div>
+    </form>
+    <h3 class="admin-list-title">Produits enregistrés</h3><div id="admin-products" class="admin-products"></div>
+  </section>
+  <div id="admin-login" class="admin-login" hidden><form id="admin-login-form"><h2>Accès gestion</h2><p>Mot de passe de démonstration : <strong>RC2026</strong></p><label>Mot de passe<input id="admin-password" type="password" autocomplete="current-password" required></label><button class="primary-btn full" type="submit">OUVRIR LA GESTION</button><button class="admin-secondary full" type="button" id="cancel-login">Annuler</button></form></div>
+  <script src="script.js"></script>
+</body>
+</html>
